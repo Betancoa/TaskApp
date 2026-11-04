@@ -9,5 +9,6 @@ it('Debe mostrar la tarea creada', () => {
   cy.get('#taskTitle').type('Comprar pan');
   cy.contains('Crear tarea').click();
 
-  cy.contains('Comprar pan').should('exist');
+  // ❌ Error provocado: buscará 'Comprar leche', esperará 4 segundos y fallará
+  cy.contains('Comprar leche').should('exist');
 });
