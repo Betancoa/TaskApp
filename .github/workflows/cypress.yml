@@ -17,7 +17,9 @@ jobs:
           node-version: 20
 
       - name: Instalar dependencias
-        run: npm install
+        run: |
+          npm install
+          npx cypress install
 
       - name: Iniciar aplicación
         run: |
